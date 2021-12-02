@@ -1,0 +1,13 @@
+<p class="lead">publicacion works!</p>
+<div *ngFor="let p of publicaciones">
+  <img src="{{ p.imagen_publicacion }}" alt="{{ p.id }}" />
+</div>
+<!-- <div *ngFor=""></div> -->
+
+<button class="btn btn-success m-2" (click)="crearPublicacion()">CREAR</button>
+<button class="btn btn-success m-2" (click)="actualizarPublicacion()">
+  ACTUALIZAR
+</button>
+<button class="btn btn-success m-2" (click)="eliminarPublicacion()">
+  ELIMINAR
+</button>

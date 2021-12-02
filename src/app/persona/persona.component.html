@@ -1,0 +1,14 @@
+<p class="lead">Componente</p>
+<p>{{ nombre }}</p>
+
+<input
+  type="text"
+  [(ngModel)]="temp"
+  placeholder="Ingrese estado"
+  class="form-control"
+/>
+
+{{ temp }}
+<br />
+<button (click)="enviar()" class="btn btn-info">Enviar</button>
+<br />

@@ -1,0 +1,65 @@
+<p class="lead items-center">Mis publicaciones</p>
+
+<div *ngFor="let p of titulares" class="my-2">
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ p.titulo }}</h5>
+      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+      <p class="card-text">
+        {{ p.descripcion }}
+      </p>
+      <button
+        class="btn btn-warning mx-2"
+        (click)="editar(p.id, p.titulo, p.descripcion)"
+      >
+        Editar
+      </button>
+      <button (click)="eliminar_titulares(p.id)" class="btn btn-danger">
+        Eliminar
+      </button>
+    </div>
+  </div>
+</div>
+
+<p class="lead items-center my-4">Crear publicaciones</p>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Título</label>
+  <input
+    type="text"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Ingrese título"
+    [(ngModel)]="titulo"
+  />
+</div>
+<p>{{ titulo }}</p>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label"
+    >Ingrese descripción</label
+  >
+  <textarea
+    class="form-control"
+    id="exampleFormControlTextarea1"
+    rows="3"
+    [(ngModel)]="descripcion"
+  ></textarea>
+  <div class="d-grid gap-2">
+    <button
+      *ngIf="!edicion"
+      class="btn btn-primary my-2"
+      (click)="crear_titular()"
+      type="button"
+    >
+      Crear publicación
+    </button>
+    <button
+      *ngIf="edicion"
+      class="btn btn-primary my-2"
+      (click)="actualizar_titular()"
+      type="button"
+    >
+      Editar publicacion
+    </button>
+  </div>
+</div>

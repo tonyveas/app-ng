@@ -1,0 +1,31 @@
+<p>mi-componente works!</p>
+<p>{{ miP }}</p>
+<h1>Colores</h1>
+<p>{{ colores[0].id }}</p>
+<p>{{ colores[0].nombre }}</p>
+<p>{{ filtrar()[0].id }}</p>
+
+<h1 class="lead">Ocultar elementos</h1>
+<p *ngIf="visible">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, obcaecati.
+</p>
+<button (click)="cambiar_estado()" class="btn btn-info">Click</button>
+
+<!-- <h1>Mostrar elementos de lista</h1> -->
+<ul *ngFor="let c of colores" class="list-group m-5">
+  <li class="list-group-item">[{{ c.id }}; {{ c.nombre }}]</li>
+</ul>
+
+<p class="lead">Usando colores</p>
+<p [ngStyle]="{ background: 'red' }">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ratione
+  consequatur unde nulla rem! Itaque minima suscipit unde laudantium voluptate,
+  odit tenetur illo dolore, quaerat repellendus rem veritatis iusto totam
+  incidunt asperiores deserunt quod doloribus facilis cumque molestiae eligendi
+  odio harum dignissimos quam! Totam numquam sequi architecto quam commodi.
+  Quos, voluptatem pariatur optio quae, molestiae enim fuga impedit consequuntur
+  error iusto expedita minus sunt nisi totam, voluptatibus tempore ducimus
+  voluptatum sint aperiam? Exercitationem necessitatibus officia, molestias quod
+  numquam, eos neque vitae pariatur labore nam, sed aperiam at iure. Magnam,
+  nobis!
+</p>
